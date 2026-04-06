@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Product Details | Esraa Gallery</title>
+  <meta
+    name="description"
+    content="View premium handmade product details from Esraa Gallery, including multiple images, descriptions, pricing, and custom order options."
+  />
+  <meta name="theme-color" content="#f6f0e8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-product">
+  <div class="site-shell">
+    <div class="announcement-bar">
+      <div class="container announcement-bar__inner">
+        <p>Handmade details. Premium finish. Meaningful gifting.</p>
+        <a href="contact-and-policies.html#custom-order-form">Need a custom version?</a>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header__inner">
+        <a href="Home.html" class="brand" aria-label="Esraa Gallery Home">
+          <span class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 72 72" role="img" aria-label="Esraa Gallery logo">
+              <defs>
+                <linearGradient id="egLogoGradientProduct" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff8f1"></stop>
+                  <stop offset="50%" stop-color="#ead7c3"></stop>
+                  <stop offset="100%" stop-color="#b98f69"></stop>
+                </linearGradient>
+              </defs>
+              <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientProduct)"></rect>
+              <path d="M22 23.5H48" stroke="#7A5A42" stroke-width="2.5" stroke-linecap="round"></path>
+              <path
+                d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                fill="none"
+                stroke="#7A5A42"
+                stroke-width="2.8"
+                stroke-linejoin="round"
+              ></path>
+              <path d="M30 36H43" stroke="#7A5A42" stroke-width="2.4" stroke-linecap="round"></path>
+              <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </span>
+
+          <span class="brand__text">
+            <strong>Esraa Gallery</strong>
+            <small>Handmade Resin Art & Meaningful Gifts</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="Home.html">Home</a>
+          <a href="Goods.html" class="is-active">Goods</a>
+          <a href="about.html">About</a>
+          <a href="contact-and-policies.html">Contact & Policies</a>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="header-icon header-icon--drawer"
+            type="button"
+            id="cartDrawerToggle"
+            aria-label="Open shopping bag"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 8.5h12l-1.1 10.2a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 9V7a3 3 0 0 1 6 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="cart-count" data-cart-count>0</span>
+          </button>
+
+          <a class="header-icon header-icon--bag" href="cart.html" aria-label="Go to cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 8.5h12l-1.1 10.2a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 9V7a3 3 0 0 1 6 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+          <nav class="mobile-nav" aria-label="Mobile Navigation">
+            <a href="Home.html">Home</a>
+            <a href="Goods.html" class="is-active">Goods</a>
+            <a href="about.html">About</a>
+            <a href="contact-and-policies.html">Contact & Policies</a>
+            <a href="cart.html">Bag <span data-cart-count>0</span></a>
+          </nav>
+          <div class="mobile-menu__footer">
+            <p>Premium handmade details, custom-ready pieces, and elevated gifting.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-page">
+        <div class="container">
+          <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+            <a href="Home.html">Home</a>
+            <span>/</span>
+            <a href="Goods.html">Goods</a>
+            <span>/</span>
+            <span id="breadcrumbCurrent">Product</span>
+          </nav>
+
+          <div id="productDetailRoot">
+            <div class="product-loading-state reveal">
+              <div class="loading-card">
+                <div class="loading-card__media shimmer"></div>
+                <div class="loading-card__content">
+                  <div class="shimmer shimmer-line shimmer-line--lg"></div>
+                  <div class="shimmer shimmer-line"></div>
+                  <div class="shimmer shimmer-line"></div>
+                  <div class="shimmer shimmer-line shimmer-line--sm"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight section--warm">
+        <div class="container">
+          <div class="product-support-grid">
+            <article class="support-info-card reveal">
+              <span class="support-info-card__label">Premium Finish</span>
+              <h3>Crafted with layered detail and a refined handmade touch.</h3>
+              <p>
+                Every Esraa Gallery piece is created to feel elegant, warm, and visually elevated.
+              </p>
+            </article>
+
+            <article class="support-info-card reveal reveal-delay-1">
+              <span class="support-info-card__label">Custom Option</span>
+              <h3>Need a personalized version of this design?</h3>
+              <p>
+                We can adapt selected pieces for events, gifting, color direction, or special
+                requests.
+              </p>
+            </article>
+
+            <article class="support-info-card reveal reveal-delay-2">
+              <span class="support-info-card__label">Meaningful Gifting</span>
+              <h3>Designed for occasions that deserve more than generic products.</h3>
+              <p>
+                Weddings, baby showers, graduations, keepsakes, and personal gifting moments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section related-products-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">You May Also Love</p>
+              <h2>More handmade pieces from the Esraa Gallery collection.</h2>
+            </div>
+            <a href="Goods.html" class="text-link">
+              Explore all goods
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="products-grid products-grid--related" id="relatedProductsGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a href="Home.html" class="brand brand--footer" aria-label="Esraa Gallery Home">
+            <span class="brand__logo" aria-hidden="true">
+              <svg viewBox="0 0 72 72">
+                <defs>
+                  <linearGradient id="egLogoGradientProductFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff7ee"></stop>
+                    <stop offset="50%" stop-color="#dfc1a1"></stop>
+                    <stop offset="100%" stop-color="#9d7150"></stop>
+                  </linearGradient>
+                </defs>
+                <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientProductFooter)"></rect>
+                <path d="M22 23.5H48" stroke="#6F523D" stroke-width="2.5" stroke-linecap="round"></path>
+                <path
+                  d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                  fill="none"
+                  stroke="#6F523D"
+                  stroke-width="2.8"
+                  stroke-linejoin="round"
+                ></path>
+                <path d="M30 36H43" stroke="#6F523D" stroke-width="2.4" stroke-linecap="round"></path>
+                <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+
+            <span class="brand__text">
+              <strong>Esraa Gallery</strong>
+              <small>Handmade with warmth and meaning</small>
+            </span>
+          </a>
+
+          <p>
+            Premium handmade resin art, candles, decor, personalized gifts, and custom event pieces
+            created to celebrate beauty, memory, and meaningful occasions.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Goods.html">Goods</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-and-policies.html">Contact & Policies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Shop Support</h3>
+          <ul>
+            <li><a href="cart.html">Your Bag</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="contact-and-policies.html#shipping-policy">Shipping Policy</a></li>
+            <li><a href="contact-and-policies.html#returns-policy">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Custom Orders</h3>
+          <p>
+            Planning a wedding, baby shower, graduation, or thoughtful gifting moment? Let’s create
+            something beautiful for it.
+          </p>
+          <a href="contact-and-policies.html#custom-order-form" class="text-link">
+            Start your request
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© <span id="year"></span> Esraa Gallery. All rights reserved.</p>
+        <p>Designed for elegance, built for growth.</p>
+      </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer__overlay" data-close-cart-drawer></div>
+      <div class="cart-drawer__panel">
+        <div class="cart-drawer__head">
+          <h2>Your Bag</h2>
+          <button
+            type="button"
+            class="cart-drawer__close"
+            data-close-cart-drawer
+            aria-label="Close bag"
+          >
+            ×
+          </button>
+        </div>
+
+        <div class="cart-drawer__body" id="cartDrawerItems">
+          <div class="cart-drawer__empty">
+            <p>Your bag is currently empty.</p>
+            <a href="Goods.html" class="btn btn--primary">Shop Goods</a>
+          </div>
+        </div>
+
+        <div class="cart-drawer__foot">
+          <div class="cart-drawer__summary">
+            <span>Subtotal</span>
+            <strong id="cartDrawerSubtotal">$0.00</strong>
+          </div>
+          <div class="cart-drawer__actions">
+            <a href="cart.html" class="btn btn--secondary btn--full">View Bag</a>
+            <a href="checkout.html" class="btn btn--primary btn--full">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="shop.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

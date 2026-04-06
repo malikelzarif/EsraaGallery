@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Checkout | Esraa Gallery</title>
+  <meta
+    name="description"
+    content="Complete your Esraa Gallery order with a premium checkout experience ready for future Stripe integration."
+  />
+  <meta name="theme-color" content="#f6f0e8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-checkout">
+  <div class="site-shell">
+    <div class="announcement-bar">
+      <div class="container announcement-bar__inner">
+        <p>Secure premium checkout experience — demo-ready for future Stripe integration.</p>
+        <a href="cart.html">Return to bag</a>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header__inner">
+        <a href="Home.html" class="brand" aria-label="Esraa Gallery Home">
+          <span class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 72 72" role="img" aria-label="Esraa Gallery logo">
+              <defs>
+                <linearGradient id="egLogoGradientCheckout" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff8f1"></stop>
+                  <stop offset="50%" stop-color="#ead7c3"></stop>
+                  <stop offset="100%" stop-color="#b98f69"></stop>
+                </linearGradient>
+              </defs>
+              <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientCheckout)"></rect>
+              <path d="M22 23.5H48" stroke="#7A5A42" stroke-width="2.5" stroke-linecap="round"></path>
+              <path
+                d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                fill="none"
+                stroke="#7A5A42"
+                stroke-width="2.8"
+                stroke-linejoin="round"
+              ></path>
+              <path d="M30 36H43" stroke="#7A5A42" stroke-width="2.4" stroke-linecap="round"></path>
+              <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </span>
+
+          <span class="brand__text">
+            <strong>Esraa Gallery</strong>
+            <small>Handmade Resin Art & Meaningful Gifts</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="Home.html">Home</a>
+          <a href="Goods.html">Goods</a>
+          <a href="about.html">About</a>
+          <a href="contact-and-policies.html">Contact & Policies</a>
+        </nav>
+
+        <div class="header__actions">
+          <a class="header-icon header-icon--bag" href="cart.html" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 8.5h12l-1.1 10.2a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 9V7a3 3 0 0 1 6 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+          <nav class="mobile-nav" aria-label="Mobile Navigation">
+            <a href="Home.html">Home</a>
+            <a href="Goods.html">Goods</a>
+            <a href="about.html">About</a>
+            <a href="contact-and-policies.html">Contact & Policies</a>
+            <a href="cart.html">Bag <span data-cart-count>0</span></a>
+          </nav>
+          <div class="mobile-menu__footer">
+            <p>Complete your order with a clean, elegant, and mobile-friendly checkout flow.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--compact">
+        <div class="container page-hero__compact reveal">
+          <p class="eyebrow">Checkout</p>
+          <h1>Complete your order with confidence.</h1>
+          <p>
+            Enter your details below to place your Esraa Gallery order. This checkout is structured
+            for a premium experience and ready for future payment integration.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight checkout-page">
+        <div class="container">
+          <form class="checkout-layout" id="checkoutForm" novalidate>
+            <!-- Left: Checkout Forms -->
+            <div class="checkout-main">
+              <div class="form-card reveal">
+                <div class="form-card__head">
+                  <p class="form-card__eyebrow">Customer Details</p>
+                  <h2>Contact Information</h2>
+                </div>
+
+                <div class="form-grid form-grid--two">
+                  <div class="form-field">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+                  </div>
+
+                  <div class="form-field form-field--full">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required />
+                  </div>
+
+                  <div class="form-field form-field--full">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-card reveal reveal-delay-1">
+                <div class="form-card__head">
+                  <p class="form-card__eyebrow">Shipping</p>
+                  <h2>Delivery Information</h2>
+                </div>
+
+                <div class="form-grid form-grid--two">
+                  <div class="form-field form-field--full">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" name="address" autocomplete="street-address" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" autocomplete="address-level2" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" autocomplete="address-level1" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" autocomplete="postal-code" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                      <option value="">Select country</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Australia">Australia</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field form-field--full">
+                    <label for="deliveryNotes">Delivery Notes <span>(Optional)</span></label>
+                    <textarea
+                      id="deliveryNotes"
+                      name="deliveryNotes"
+                      rows="4"
+                      placeholder="Apartment, gate code, preferred delivery notes, or order comments..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-card reveal reveal-delay-2">
+                <div class="form-card__head">
+                  <p class="form-card__eyebrow">Payment</p>
+                  <h2>Payment Method</h2>
+                </div>
+
+                <div class="payment-ui">
+                  <div class="payment-ui__badges">
+                    <span>Demo Card UI</span>
+                    <span>Stripe-ready structure</span>
+                    <span>Secure layout</span>
+                  </div>
+
+                  <div class="payment-card-preview">
+                    <div class="payment-card-preview__top">
+                      <span>Esraa Gallery</span>
+                      <span>Secure Checkout</span>
+                    </div>
+                    <div class="payment-card-preview__number" id="cardPreviewNumber">
+                      •••• •••• •••• 4242
+                    </div>
+                    <div class="payment-card-preview__bottom">
+                      <div>
+                        <small>Cardholder</small>
+                        <strong id="cardPreviewName">Your Name</strong>
+                      </div>
+                      <div>
+                        <small>Expires</small>
+                        <strong id="cardPreviewExpiry">MM/YY</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-grid form-grid--two">
+                    <div class="form-field form-field--full">
+                      <label for="cardName">Name on Card</label>
+                      <input type="text" id="cardName" name="cardName" autocomplete="cc-name" required />
+                    </div>
+
+                    <div class="form-field form-field--full">
+                      <label for="cardNumber">Card Number</label>
+                      <input
+                        type="text"
+                        id="cardNumber"
+                        name="cardNumber"
+                        inputmode="numeric"
+                        autocomplete="cc-number"
+                        maxlength="19"
+                        placeholder="1234 5678 9012 3456"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-field">
+                      <label for="cardExpiry">Expiry Date</label>
+                      <input
+                        type="text"
+                        id="cardExpiry"
+                        name="cardExpiry"
+                        inputmode="numeric"
+                        autocomplete="cc-exp"
+                        maxlength="5"
+                        placeholder="MM/YY"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-field">
+                      <label for="cardCvc">CVC</label>
+                      <input
+                        type="text"
+                        id="cardCvc"
+                        name="cardCvc"
+                        inputmode="numeric"
+                        autocomplete="cc-csc"
+                        maxlength="4"
+                        placeholder="123"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-card reveal reveal-delay-3">
+                <div class="form-card__head">
+                  <p class="form-card__eyebrow">Order Notes</p>
+                  <h2>Gifting or Personalization Requests</h2>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-field form-field--full">
+                    <label for="giftNote">Gift Note or Special Instructions <span>(Optional)</span></label>
+                    <textarea
+                      id="giftNote"
+                      name="giftNote"
+                      rows="5"
+                      placeholder="Gift message, personalization details, event notes, or preferences..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="checkbox-group">
+                  <label class="check-control">
+                    <input type="checkbox" id="termsAgree" required />
+                    <span>
+                      I understand this is a demo checkout flow and agree to the
+                      <a href="contact-and-policies.html">policies</a>.
+                    </span>
+                  </label>
+
+                  <label class="check-control">
+                    <input type="checkbox" id="marketingOptIn" />
+                    <span>Send me updates about new collections, gifting ideas, and custom offerings.</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Summary -->
+            <aside class="checkout-sidebar">
+              <div class="summary-card reveal reveal-delay-1">
+                <div class="summary-card__head">
+                  <p class="summary-card__eyebrow">Order Summary</p>
+                  <h2>Checkout Details</h2>
+                </div>
+
+                <div class="checkout-summary-items" id="checkoutSummaryItems">
+                  <!-- JS renders summary items -->
+                </div>
+
+                <div class="summary-lines">
+                  <div class="summary-line">
+                    <span>Items</span>
+                    <strong id="checkoutSummaryCount">0</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="checkoutSummarySubtotal">$0.00</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Shipping</span>
+                    <strong id="checkoutSummaryShipping">$12.00</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Tax</span>
+                    <strong id="checkoutSummaryTax">$0.00</strong>
+                  </div>
+                </div>
+
+                <div class="summary-total">
+                  <span>Total</span>
+                  <strong id="checkoutSummaryTotal">$0.00</strong>
+                </div>
+
+                <div class="summary-card__actions">
+                  <button type="submit" class="btn btn--primary btn--full" id="placeOrderButton">
+                    Place Order
+                  </button>
+                  <a href="cart.html" class="btn btn--secondary btn--full">Back to Bag</a>
+                </div>
+
+                <div class="summary-note">
+                  <p>
+                    This payment interface is structured for future Stripe or payment-gateway
+                    integration. Current behavior is demo checkout only.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mini-policy-card reveal reveal-delay-2">
+                <h3>Important</h3>
+                <p>
+                  Handmade items and custom event orders may require additional processing time,
+                  especially during high-volume seasons.
+                </p>
+                <a href="contact-and-policies.html#processing-policy" class="text-link">
+                  Review processing policies
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </aside>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a href="Home.html" class="brand brand--footer" aria-label="Esraa Gallery Home">
+            <span class="brand__logo" aria-hidden="true">
+              <svg viewBox="0 0 72 72">
+                <defs>
+                  <linearGradient id="egLogoGradientCheckoutFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff7ee"></stop>
+                    <stop offset="50%" stop-color="#dfc1a1"></stop>
+                    <stop offset="100%" stop-color="#9d7150"></stop>
+                  </linearGradient>
+                </defs>
+                <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientCheckoutFooter)"></rect>
+                <path d="M22 23.5H48" stroke="#6F523D" stroke-width="2.5" stroke-linecap="round"></path>
+                <path
+                  d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                  fill="none"
+                  stroke="#6F523D"
+                  stroke-width="2.8"
+                  stroke-linejoin="round"
+                ></path>
+                <path d="M30 36H43" stroke="#6F523D" stroke-width="2.4" stroke-linecap="round"></path>
+                <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+
+            <span class="brand__text">
+              <strong>Esraa Gallery</strong>
+              <small>Handmade with warmth and meaning</small>
+            </span>
+          </a>
+
+          <p>
+            Premium handmade resin art, candles, decor, personalized gifts, and custom event pieces
+            created to celebrate beauty, memory, and meaningful occasions.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Goods.html">Goods</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-and-policies.html">Contact & Policies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Shop Support</h3>
+          <ul>
+            <li><a href="cart.html">Your Bag</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="contact-and-policies.html#shipping-policy">Shipping Policy</a></li>
+            <li><a href="contact-and-policies.html#returns-policy">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Custom Orders</h3>
+          <p>
+            Planning a wedding, baby shower, graduation, or thoughtful gifting moment? Let’s create
+            something beautiful for it.
+          </p>
+          <a href="contact-and-policies.html#custom-order-form" class="text-link">
+            Start your request
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© <span id="year"></span> Esraa Gallery. All rights reserved.</p>
+        <p>Designed for elegance, built for growth.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="shop.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Your Bag | Esraa Gallery</title>
+  <meta
+    name="description"
+    content="Review your Esraa Gallery bag, update quantities, remove items, and proceed to checkout."
+  />
+  <meta name="theme-color" content="#f6f0e8" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-cart">
+  <div class="site-shell">
+    <div class="announcement-bar">
+      <div class="container announcement-bar__inner">
+        <p>Your handmade selections are almost ready.</p>
+        <a href="Goods.html">Continue shopping</a>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container header__inner">
+        <a href="Home.html" class="brand" aria-label="Esraa Gallery Home">
+          <span class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 72 72" role="img" aria-label="Esraa Gallery logo">
+              <defs>
+                <linearGradient id="egLogoGradientCart" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff8f1"></stop>
+                  <stop offset="50%" stop-color="#ead7c3"></stop>
+                  <stop offset="100%" stop-color="#b98f69"></stop>
+                </linearGradient>
+              </defs>
+              <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientCart)"></rect>
+              <path d="M22 23.5H48" stroke="#7A5A42" stroke-width="2.5" stroke-linecap="round"></path>
+              <path
+                d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                fill="none"
+                stroke="#7A5A42"
+                stroke-width="2.8"
+                stroke-linejoin="round"
+              ></path>
+              <path d="M30 36H43" stroke="#7A5A42" stroke-width="2.4" stroke-linecap="round"></path>
+              <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </span>
+
+          <span class="brand__text">
+            <strong>Esraa Gallery</strong>
+            <small>Handmade Resin Art & Meaningful Gifts</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="Home.html">Home</a>
+          <a href="Goods.html">Goods</a>
+          <a href="about.html">About</a>
+          <a href="contact-and-policies.html">Contact & Policies</a>
+        </nav>
+
+        <div class="header__actions">
+          <a class="header-icon header-icon--bag" href="cart.html" aria-label="Shopping bag">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 8.5h12l-1.1 10.2a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 9V7a3 3 0 0 1 6 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__inner">
+          <nav class="mobile-nav" aria-label="Mobile Navigation">
+            <a href="Home.html">Home</a>
+            <a href="Goods.html">Goods</a>
+            <a href="about.html">About</a>
+            <a href="contact-and-policies.html">Contact & Policies</a>
+            <a href="cart.html" class="is-active">Bag <span data-cart-count>0</span></a>
+          </nav>
+          <div class="mobile-menu__footer">
+            <p>Review your handmade selections and move to secure checkout.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--compact">
+        <div class="container page-hero__compact reveal">
+          <p class="eyebrow">Your Bag</p>
+          <h1>Review your handmade selections before checkout.</h1>
+          <p>
+            Update quantities, remove items, or continue shopping before placing your order.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight cart-page">
+        <div class="container">
+          <div class="cart-layout">
+            <!-- Main Cart Content -->
+            <div class="cart-main">
+              <div class="cart-card reveal">
+                <div class="cart-card__head">
+                  <div>
+                    <p class="cart-card__eyebrow">Selected Items</p>
+                    <h2>Your Esraa Gallery Bag</h2>
+                  </div>
+                  <a href="Goods.html" class="text-link">
+                    Continue shopping
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+
+                <div id="cartPageItems" class="cart-items-list" aria-live="polite">
+                  <!-- JS renders cart items here -->
+                </div>
+
+                <div id="cartEmptyState" class="cart-empty-state" hidden>
+                  <div class="cart-empty-state__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M6 8.5h12l-1.1 10.2a2 2 0 0 1-2 1.8H9.1a2 2 0 0 1-2-1.8L6 8.5Z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9 9V7a3 3 0 0 1 6 0v2"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <h3>Your bag is empty.</h3>
+                  <p>
+                    Start exploring handmade resin art, candles, decor, and personalized gifts from
+                    Esraa Gallery.
+                  </p>
+                  <div class="cart-empty-state__actions">
+                    <a href="Goods.html" class="btn btn--primary">Shop Goods</a>
+                    <a href="contact-and-policies.html#custom-order-form" class="btn btn--secondary">
+                      Request Custom Order
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart-benefits-grid">
+                <article class="support-info-card reveal">
+                  <span class="support-info-card__label">Premium Handmade</span>
+                  <h3>Crafted in small-batch style with warmth and detail.</h3>
+                  <p>
+                    Each piece is designed to feel elevated, meaningful, and visually refined.
+                  </p>
+                </article>
+
+                <article class="support-info-card reveal reveal-delay-1">
+                  <span class="support-info-card__label">Custom Friendly</span>
+                  <h3>Need edits, personalization, or event quantities?</h3>
+                  <p>
+                    Esraa Gallery can support thoughtful custom requests for special occasions.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <!-- Summary Sidebar -->
+            <aside class="cart-sidebar">
+              <div class="summary-card reveal reveal-delay-1">
+                <div class="summary-card__head">
+                  <p class="summary-card__eyebrow">Order Summary</p>
+                  <h2>Bag Totals</h2>
+                </div>
+
+                <div class="summary-lines">
+                  <div class="summary-line">
+                    <span>Items</span>
+                    <strong id="cartSummaryCount">0</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="cartSummarySubtotal">$0.00</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Estimated Shipping</span>
+                    <strong id="cartSummaryShipping">$12.00</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span>Estimated Tax</span>
+                    <strong id="cartSummaryTax">$0.00</strong>
+                  </div>
+                </div>
+
+                <div class="summary-total">
+                  <span>Estimated Total</span>
+                  <strong id="cartSummaryTotal">$0.00</strong>
+                </div>
+
+                <div class="summary-card__actions">
+                  <a href="checkout.html" class="btn btn--primary btn--full" id="cartCheckoutButton">
+                    Proceed to Checkout
+                  </a>
+                  <a href="Goods.html" class="btn btn--secondary btn--full">Continue Shopping</a>
+                </div>
+
+                <div class="summary-note">
+                  <p>
+                    Shipping and taxes are estimated for demo purposes and can be finalized during
+                    real payment integration later.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mini-policy-card reveal reveal-delay-2">
+                <h3>Need a custom version?</h3>
+                <p>
+                  If one of your selected pieces needs personalization or event-level quantity,
+                  submit a custom order request.
+                </p>
+                <a href="contact-and-policies.html#custom-order-form" class="text-link">
+                  Start a custom request
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a href="Home.html" class="brand brand--footer" aria-label="Esraa Gallery Home">
+            <span class="brand__logo" aria-hidden="true">
+              <svg viewBox="0 0 72 72">
+                <defs>
+                  <linearGradient id="egLogoGradientCartFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff7ee"></stop>
+                    <stop offset="50%" stop-color="#dfc1a1"></stop>
+                    <stop offset="100%" stop-color="#9d7150"></stop>
+                  </linearGradient>
+                </defs>
+                <rect x="4" y="4" width="64" height="64" rx="22" fill="url(#egLogoGradientCartFooter)"></rect>
+                <path d="M22 23.5H48" stroke="#6F523D" stroke-width="2.5" stroke-linecap="round"></path>
+                <path
+                  d="M24 36C24 28.82 29.82 23 37 23C44.18 23 50 28.82 50 36C50 43.18 44.18 49 37 49H24V36Z"
+                  fill="none"
+                  stroke="#6F523D"
+                  stroke-width="2.8"
+                  stroke-linejoin="round"
+                ></path>
+                <path d="M30 36H43" stroke="#6F523D" stroke-width="2.4" stroke-linecap="round"></path>
+                <path d="M29.5 30.5H41.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29.5 41.5H38.5" stroke="#A67D59" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </span>
+
+            <span class="brand__text">
+              <strong>Esraa Gallery</strong>
+              <small>Handmade with warmth and meaning</small>
+            </span>
+          </a>
+
+          <p>
+            Premium handmade resin art, candles, decor, personalized gifts, and custom event pieces
+            created to celebrate beauty, memory, and meaningful occasions.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Goods.html">Goods</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-and-policies.html">Contact & Policies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Shop Support</h3>
+          <ul>
+            <li><a href="cart.html">Your Bag</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="contact-and-policies.html#shipping-policy">Shipping Policy</a></li>
+            <li><a href="contact-and-policies.html#returns-policy">Returns Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Custom Orders</h3>
+          <p>
+            Planning a wedding, baby shower, graduation, or thoughtful gifting moment? Let’s create
+            something beautiful for it.
+          </p>
+          <a href="contact-and-policies.html#custom-order-form" class="text-link">
+            Start your request
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© <span id="year"></span> Esraa Gallery. All rights reserved.</p>
+        <p>Designed for elegance, built for growth.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="shop.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
